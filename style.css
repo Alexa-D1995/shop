@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #f3f3f3;
+  --secondary-color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 200ms ease-in;
+  display: block;
+
+  &:hover {
+    color: orange;
+    transform: scale(1.2);
+    /* scale: 1.2; */
+  }
+}
+
+/* a:hover {
+  color: orange;
+  } */
+
+.navbar {
+  background-color: blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+  gap: 16px;
+}
+
+img {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+}
+
+li {
+  width: 250px;
+  border: 2px solid var(--primary-color);
+  background-color: black;
+  color: white;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+
+  & button {
+    padding: 8px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  & .btn-top {
+    background-color: aliceblue;
+    color: var(--secondary-color);
+  }
+}
