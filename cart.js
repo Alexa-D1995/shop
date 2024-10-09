@@ -42,7 +42,7 @@ products.forEach((product) => {
   quantity.appendChild(quantityContent);
 
   const btnContainer = document.createElement("div");
-  btnContainer.classList.add("btn-container");
+  btnContainer.classList.add("buttons-container");
   btnContainer.append(plusButton, quantity, minusButton, deleteButton);
 
   const productCard = document.createElement("div");
