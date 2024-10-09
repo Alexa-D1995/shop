@@ -24,6 +24,7 @@
 
 
 .product-card {
+  border: 2px solid black;
 align-items: center;
   /* height: auto; */
   display: grid;
@@ -38,6 +39,7 @@ grid-template-areas:
 }
 
 & img {
+  background-color: black;
   width: 100px;
   height: auto;
   grid-area: image;
@@ -55,8 +57,14 @@ grid-template-areas:
 
 .btn-container {
   display: flex;
+  align-items: flex-end;
   gap: 10px;
-  align-items: center;
-  /* justify-content: space-between; */
   
+}
+
+.products {
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

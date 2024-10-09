@@ -92,11 +92,15 @@ function saveToLocalStorage(id, thumbnail, title, price) {
 function updateProductsNumber() {
   const productCount = document.querySelector(".product-count");
   const existingProducts = localStorage.getItem("produse");
+  let counter = 0;
   if (!existingProducts) {
-    productCount.innerHTML = 0;
+    productCount.innerHTML = counter;
   } else {
     const parsedProducts = JSON.parse(existingProducts);
-    productCount.innerHTML = parsedProducts.length;
+    parsedProducts.forEach((product) => {
+      counter += product.quantity;
+    });
+    productCount.innerHTML = counter;
   }
 }
 
