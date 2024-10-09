@@ -92,6 +92,12 @@ function increaseQuantity(id) {
     if (product.id === id) {
       const productQuantity = document.querySelector(`#product-${id} span`);
       productQuantity.innerHTML = product.quantity + 1;
+      if (product.quantity + 1 === 2) {
+        const minusButton = document.querySelectorAll(
+          `#product-${id} button`
+        )[1];
+        minusButton.disabled = false;
+      }
       return {
         ...product,
         quantity: product.quantity + 1,
